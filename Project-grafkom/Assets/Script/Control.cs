@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Control : MonoBehaviour
 {
-    public GameObject instruksi,asteroid,text;
+    public GameObject instruksi,asteroid,text, gameover;
     Rigidbody2D Rb;
     public float jumpForce;
     float score;    
@@ -17,6 +17,7 @@ public class Control : MonoBehaviour
         Rb.gravityScale = 0;
         asteroid.SetActive(false);
         text.SetActive(false);
+        gameover.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,9 +39,11 @@ public class Control : MonoBehaviour
         {
             score++;
         }
-        if(collision.gameObject.tag == "asteroid")
+        if(collision.gameObject.tag == "asteroid" || collision.gameObject.tag=="bottom")
         {
             Destroy(gameObject);
+            gameover.SetActive(true);
+            asteroid.SetActive(false);
         }
     }
 }

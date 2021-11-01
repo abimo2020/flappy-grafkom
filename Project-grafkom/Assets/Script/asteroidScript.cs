@@ -8,7 +8,7 @@ public class asteroidScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nilaiRandom = Random.Range(-10.3f, 3.8f);
+        nilaiRandom = Random.Range(-18.9f, 6.8f);
         transform.position = new Vector2(transform.position.x, nilaiRandom);
     }
 
