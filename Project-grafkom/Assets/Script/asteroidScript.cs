@@ -15,6 +15,6 @@ public class asteroidScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Vector2.left*50, Time.deltaTime*7);
+        transform.position = Vector2.MoveTowards(transform.position, Vector2.left*500, Time.deltaTime*7);
     }
 }

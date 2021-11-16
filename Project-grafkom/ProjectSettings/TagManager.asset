@@ -8,6 +8,8 @@ TagManager:
   - asteroid
   - bottom
   - superman
+  - score
+  - highscore
   layers:
   - Default
   - TransparentFX
