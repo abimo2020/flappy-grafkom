@@ -16,7 +16,7 @@ public class SpawnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time <= 0)
+        if (Input.GetMouseButtonDown(0)&&time <= 0)
         {
             Instantiate(asteroid, transform.position, Quaternion.identity);
             time = timer;
